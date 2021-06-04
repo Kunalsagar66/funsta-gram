@@ -1,0 +1,22 @@
+import React from "react";
+import "./Login.css";
+import "boxicons";
+import { auth, provider } from "../firebase";
+import logo from "../search_logo.png";
+const Login = () => {
+  const loginHandler = () => {
+    auth.signInWithPopup(provider).catch(alert);
+  };
+  return (
+    <div className="login">
+      <h2>funstagram</h2>
+      <button className="login__btn" onClick={loginHandler}>
+        Sign in with
+        <img src={logo} alt="Glogo" className="login__glogo" />
+        {/* <box-icon type="logo" name="google" color="#de5246"></box-icon> */}
+      </button>
+    </div>
+  );
+};
+
+export default Login;

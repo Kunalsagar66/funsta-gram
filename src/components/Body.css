@@ -1,0 +1,47 @@
+.body {
+  /* flex: 80%; */
+  position: relative;
+  margin-top: 1em;
+  background-color: #fafafa;
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  max-width: 968px;
+  align-self: center;
+}
+.bodymain {
+  padding: 0.5em;
+  background-color: #fafafa;
+  width: 60%;
+}
+.bodymain__stories {
+  border: 0.1px solid #dbdbdb;
+  border-radius: 5px;
+  overflow-x: scroll;
+  padding: 1em;
+  display: flex;
+  background-color: #fff;
+}
+
+.bodymain__stories::-webkit-scrollbar {
+  display: none;
+}
+.bodymain__arrow {
+  z-index: 1000;
+  position: absolute;
+  top: 50%;
+  right: 1%;
+  transform: translateY(-50%);
+}
+
+.overlay {
+  position: absolute;
+  right: 45%;
+
+  padding: 1em;
+  display: flex;
+
+  top: 10%;
+  border-radius: 50%;
+  background-color: rgb(133, 133, 133);
+}
