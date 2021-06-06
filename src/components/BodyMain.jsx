@@ -7,7 +7,14 @@ import "boxicons";
 import "./Body.css";
 const BodyMain = () => {
   const [posts, setPosts] = useState([]);
+
+  const fetchUser = async () => {
+    const res = await fetch("https://randomuser.me/api/?results=5");
+    const data = await res.json();
+    console.log(data);
+  };
   useEffect(() => {
+    fetchUser();
     db.collection("posts")
       .orderBy("timeStamp", "desc")
       .onSnapshot((snapshot) => {
@@ -34,7 +41,7 @@ const BodyMain = () => {
         <Story></Story>
         <Story></Story>
       </div>
-      <PostFeed></PostFeed>
+
       {posts?.map((post) => {
         return <Feed {...post} key={post.uID}></Feed>;
       })}
