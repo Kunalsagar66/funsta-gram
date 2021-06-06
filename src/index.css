@@ -11,10 +11,14 @@
   --logo-font: "Cookie", cursive;
   --text-font: "Source Sans Pro", sans-serif;
   --border: 0.1px solid #dbdbdb;
+  --dark-bg: #0f0f0f;
+  --dark-card: #0d0c0a;
   background-color: #fafafa;
+  /* background-color: #0f0f0f; */
 }
 body {
   background-color: #fafafa;
+  /* background-color: #0f0f0f; */
   font-family: var(--text-font);
   color: #262626;
 }
@@ -22,4 +26,5 @@ body {
 .app {
   display: flex;
   flex-direction: column;
+  position: relative;
 }

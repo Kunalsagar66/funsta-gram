@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./BodyAside.css";
+import PostFeed from "./PostFeed";
 import "boxicons";
 const BodyAside = () => {
+  const [modal, setModal] = useState(false);
   return (
     <div className="bodyaside">
       <div className="bodyaside__avatar">
@@ -31,6 +33,8 @@ const BodyAside = () => {
           <p>hola amigos</p>
         </div>
       </div>
+      <button onClick={() => setModal(!modal)}>post</button>
+      {modal && <PostFeed handleModal={() => setModal(!modal)}></PostFeed>}
     </div>
   );
 };

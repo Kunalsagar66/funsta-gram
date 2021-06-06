@@ -1,19 +1,21 @@
 .body {
   /* flex: 80%; */
-  /* position: relative; */
+
   margin-top: 1em;
   background-color: #fafafa;
+  /* background-color: #0f0f0f; */
   display: flex;
   height: 100%;
   width: 100%;
   max-width: 968px;
   align-self: center;
-  overflow-y: hidden;
+
   justify-content: space-between;
 }
 .bodymain {
   padding: 0.5em;
   background-color: #fafafa;
+  /* background-color: #0f0f0f; */
   width: 60%;
 }
 .bodymain__stories {
@@ -44,4 +46,12 @@
   top: 10%;
   border-radius: 50%;
   background-color: rgb(133, 133, 133);
+}
+@media screen and (max-width: 768px) {
+  .body {
+    flex-direction: column;
+  }
+  .bodymain {
+    width: 100%;
+  }
 }

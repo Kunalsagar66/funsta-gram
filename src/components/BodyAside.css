@@ -1,4 +1,13 @@
 .bodyaside {
   background-color: red;
   width: 40%;
+  height: 50vh;
+  position: sticky;
+
+  top: 5em;
+}
+@media screen and (max-width: 768px) {
+  .bodyaside {
+    display: none;
+  }
 }
