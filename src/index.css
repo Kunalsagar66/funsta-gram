@@ -16,6 +16,7 @@
 body {
   background-color: #fafafa;
   font-family: var(--text-font);
+  color: #262626;
 }
 
 .app {

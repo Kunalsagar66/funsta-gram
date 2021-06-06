@@ -9,7 +9,7 @@ const Login = () => {
   };
   return (
     <div className="login">
-      <h2>funstagram</h2>
+      <h2>instaglam</h2>
       <button className="login__btn" onClick={loginHandler}>
         Sign in with
         <img src={logo} alt="Glogo" className="login__glogo" />

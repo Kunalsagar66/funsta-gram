@@ -1,13 +1,15 @@
 .body {
   /* flex: 80%; */
-  position: relative;
+  /* position: relative; */
   margin-top: 1em;
   background-color: #fafafa;
   display: flex;
-  height: 80vh;
+  height: 100%;
   width: 100%;
   max-width: 968px;
   align-self: center;
+  overflow-y: hidden;
+  justify-content: space-between;
 }
 .bodymain {
   padding: 0.5em;
@@ -37,10 +39,8 @@
 .overlay {
   position: absolute;
   right: 45%;
-
   padding: 1em;
   display: flex;
-
   top: 10%;
   border-radius: 50%;
   background-color: rgb(133, 133, 133);

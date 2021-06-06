@@ -1,8 +1,12 @@
 .header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
   flex: 15%;
   padding: 0.5em;
   background-color: #fff;
   border-bottom: 0.1px solid #dbdbdb;
+  z-index: 3000;
 }
 .header__popup {
   z-index: 2000;
@@ -12,9 +16,9 @@
   position: absolute;
   background-color: #fff;
   width: 25%;
-  top: 10%;
-  left: 47%;
-  transform: translate(-47%, -10%);
+  top: 100%;
+  left: 35%;
+  /* transform: translate(-47%, -40%); */
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .header__popup__headings > h2 {
