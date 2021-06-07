@@ -1,16 +1,16 @@
+import { PayCircleFilled } from "@ant-design/icons";
 import React from "react";
 import "./Story.css";
 
-const Story = () => {
+const Story = ({ photoURL, userName }) => {
+  // console.log(name, picture);
+  // const uName = (name?.first + "." + name?.last).toLowerCase();
   return (
     <div className="story">
       <div className="story__img">
-        <img
-          src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-          alt=""
-        />
+        <img src={photoURL} alt="" />
       </div>
-      <h6 className="story__username">Alex Saprun</h6>
+      <h6 className="story__username">{userName}</h6>
     </div>
   );
 };

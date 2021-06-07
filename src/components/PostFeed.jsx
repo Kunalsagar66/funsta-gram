@@ -43,15 +43,14 @@ const PostFeed = ({ handleModal }) => {
     <ThemeProvider theme={theme}>
       <div className="modal">
         <div className="postfeed">
-          <div className="postfeed__avatar">
+          {/* <div className="postfeed__avatar">
             <img src={user?.photoURL} alt="" />
-          </div>
+          </div> */}
 
           <div className="postfeed__input">
             <TextField
-              id="outlined-basic"
+              id="standard-basic"
               label="Image URL"
-              variant="outlined"
               size="small"
               style={{ width: "100%" }}
               value={image}
@@ -60,9 +59,8 @@ const PostFeed = ({ handleModal }) => {
               }}
             />
             <TextField
-              id="outlined-basic"
+              id="filled-basic"
               label="Caption"
-              variant="outlined"
               multiline
               size="small"
               style={{ marginTop: "0.75em", width: "100%" }}
@@ -72,7 +70,7 @@ const PostFeed = ({ handleModal }) => {
               }}
             />
           </div>
-          <button onClick={handleModal}>Close</button>
+          {/* <button onClick={handleModal}>Close</button> */}
 
           <button className="postfeed__btn" onClick={postHandler}>
             Post
