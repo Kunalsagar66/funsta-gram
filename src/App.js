@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Login from "./components/Login";
+import BodyAside from "./components/BodyAside";
 import { useAuthState } from "react-firebase-hooks/auth";
 import db, { auth } from "./firebase";
 function App() {
