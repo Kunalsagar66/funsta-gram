@@ -1,12 +1,11 @@
 .bodyaside {
-  background-color: #fafafa;
   width: 35%;
   height: 80vh;
   position: sticky;
   top: 5em;
 }
 .bodyaside__user {
-  background-color: #fff;
+  background-color: var(--light-card);
   border: var(--border);
   border-radius: 5px;
   display: flex;
@@ -53,10 +52,20 @@
 .bodyaside__text__mid {
   display: flex;
   justify-content: space-between;
+
   margin-top: 0.75em;
 }
-.bodyaside__text__mid > p > span {
-  font-weight: bold;
+.bodyaside__text__mid__posts {
+  display: flex;
+  flex-direction: column;
+}
+.bodyaside__text__mid__following {
+  display: flex;
+  flex-direction: column;
+}
+.bodyaside__text__mid__followers {
+  display: flex;
+  flex-direction: column;
 }
 .bodyaside__text__bottom {
   margin-top: 0.75em;

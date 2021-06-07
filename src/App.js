@@ -5,6 +5,8 @@ import Login from "./components/Login";
 import BodyAside from "./components/BodyAside";
 import { useAuthState } from "react-firebase-hooks/auth";
 import db, { auth } from "./firebase";
+import { motion } from "framer-motion";
+import FadeIn from "react-fade-in";
 function App() {
   const [user] = useAuthState(auth);
   const userName = user?.displayName.replace(" ", ".").toLowerCase();
@@ -28,10 +30,12 @@ function App() {
       {!user ? (
         <Login></Login>
       ) : (
-        <div className="app">
-          <Header></Header>
-          <Body></Body>
-        </div>
+        <FadeIn transitionDuration={600}>
+          <div className="app">
+            <Header></Header>
+            <Body></Body>
+          </div>
+        </FadeIn>
       )}
     </>
   );

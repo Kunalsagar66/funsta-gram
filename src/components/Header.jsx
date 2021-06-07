@@ -3,11 +3,22 @@ import "./Header.css";
 import "boxicons";
 import users from "../users";
 import SearchUser from "./SearchUser";
+import { auth } from "../firebase";
+import PostFeed from "./PostFeed";
+import { motion } from "framer-motion";
 const Header = () => {
   const [togglePopup, setTogglePopup] = useState(false);
-
+  const [addPost, setAddPost] = useState(false);
   const searchHandler = () => {
     setTogglePopup(!togglePopup);
+  };
+  const logoutHandler = () => {
+    setTimeout(() => {
+      auth.signOut();
+    }, 1000);
+  };
+  const postHandler = () => {
+    setAddPost(!addPost);
   };
   return (
     <div className="header">
@@ -22,7 +33,11 @@ const Header = () => {
           })}
         </div>
       )}
+
       <div className="header__wrapper">
+        <div className="header__post" onClick={postHandler}>
+          <box-icon name="message-square-add" size="30px"></box-icon>
+        </div>
         <h1 className="header__logo">instaglam</h1>
 
         <div className="header__searchbox">
@@ -39,7 +54,15 @@ const Header = () => {
           <box-icon name="compass"></box-icon>
           <box-icon name="heart"></box-icon>
         </div>
+        <div className="header__logout" onClick={logoutHandler}>
+          <box-icon
+            name="log-out-circle"
+            size="30px"
+            color="#e62d44"
+          ></box-icon>
+        </div>
       </div>
+      {addPost && <PostFeed hideAddBtn={postHandler}></PostFeed>}
     </div>
   );
 };

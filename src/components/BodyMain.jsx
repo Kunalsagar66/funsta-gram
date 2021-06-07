@@ -5,6 +5,8 @@ import Feed from "./Feed";
 import db from "../firebase";
 import "boxicons";
 import "./Body.css";
+import { HideUntilLoaded } from "react-animation";
+
 const BodyMain = () => {
   const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);

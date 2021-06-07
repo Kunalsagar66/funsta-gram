@@ -7,7 +7,9 @@ const BodyAside = () => {
   const [modal, setModal] = useState(false);
 
   const logOutHandlder = () => {
-    auth.signOut();
+    setTimeout(() => {
+      auth.signOut();
+    });
   };
   return (
     <div className="bodyaside">
@@ -26,6 +28,7 @@ const BodyAside = () => {
             {/* <box-icon name="log-out-circle"></box-icon> */}
           </div>
           <div className="bodyaside__text__mid">
+<<<<<<< HEAD
             <p>
               <span>200</span> posts
             </p>
@@ -35,6 +38,20 @@ const BodyAside = () => {
             <p>
               <span>20</span> following
             </p>
+=======
+            <div className="bodyaside__text__mid__posts">
+              <h4>200</h4>
+              <p>posts</p>
+            </div>
+            <div className="bodyaside__text__mid__following">
+              <h4>100</h4>
+              <p>following</p>
+            </div>
+            <div className="bodyaside__text__mid__followers">
+              <h4>10</h4>
+              <p>followers</p>
+            </div>
+>>>>>>> 9437499cacd4c19c0ff795f534c63313d7ff6905
           </div>
           <div className="bodyaside__text__bottom">
             <h3>Ayush Maurya</h3>
