@@ -5,7 +5,6 @@ import users from "../users";
 import SearchUser from "./SearchUser";
 import { auth } from "../firebase";
 import PostFeed from "./PostFeed";
-import { motion } from "framer-motion";
 const Header = () => {
   const [togglePopup, setTogglePopup] = useState(false);
   const [addPost, setAddPost] = useState(false);
