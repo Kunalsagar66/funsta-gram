@@ -1,9 +1,7 @@
 .body {
   /* flex: 80%; */
-
   margin-top: 1em;
-  background-color: #fafafa;
-  /* background-color: #0f0f0f; */
+
   display: flex;
   height: 100%;
   width: 100%;
@@ -14,18 +12,16 @@
 }
 .bodymain {
   padding: 0.5em;
-  background-color: #fafafa;
 
-  /* background-color: #0f0f0f; */
   width: 60%;
 }
 .bodymain__stories {
-  border: 0.1px solid #dbdbdb;
+  border: var(--border);
   border-radius: 5px;
   overflow-x: scroll;
   padding: 1em;
   display: flex;
-  background-color: #fff;
+  background-color: var(--light-card);
 }
 
 .bodymain__stories::-webkit-scrollbar {
@@ -39,15 +35,6 @@
   transform: translateY(-50%);
 }
 
-.overlay {
-  position: absolute;
-  right: 45%;
-  padding: 1em;
-  display: flex;
-  top: 10%;
-  border-radius: 50%;
-  background-color: rgb(133, 133, 133);
-}
 @media screen and (max-width: 768px) {
   .body {
     flex-direction: column;
