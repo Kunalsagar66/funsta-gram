@@ -7,7 +7,9 @@ const BodyAside = () => {
   const [modal, setModal] = useState(false);
 
   const logOutHandlder = () => {
-    auth.signOut();
+    setTimeout(() => {
+      auth.signOut();
+    });
   };
   return (
     <div className="bodyaside">

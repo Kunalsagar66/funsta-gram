@@ -5,6 +5,7 @@ import users from "../users";
 import SearchUser from "./SearchUser";
 import { auth } from "../firebase";
 import PostFeed from "./PostFeed";
+import { motion } from "framer-motion";
 const Header = () => {
   const [togglePopup, setTogglePopup] = useState(false);
   const [addPost, setAddPost] = useState(false);
@@ -12,7 +13,9 @@ const Header = () => {
     setTogglePopup(!togglePopup);
   };
   const logoutHandler = () => {
-    auth.signOut();
+    setTimeout(() => {
+      auth.signOut();
+    }, 1000);
   };
   const postHandler = () => {
     setAddPost(!addPost);
@@ -59,7 +62,7 @@ const Header = () => {
           ></box-icon>
         </div>
       </div>
-      {addPost && <PostFeed></PostFeed>}
+      {addPost && <PostFeed hideAddBtn={postHandler}></PostFeed>}
     </div>
   );
 };
