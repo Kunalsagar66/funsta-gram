@@ -30,7 +30,7 @@ const BodyAside = () => {
               <span>200</span> posts
             </p>
             <p>
-              <span>20</span> followers
+              <span>200</span> followers
             </p>
             <p>
               <span>20</span> following

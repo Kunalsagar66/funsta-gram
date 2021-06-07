@@ -12,7 +12,7 @@ const BodyMain = () => {
   const fetchUser = async () => {
     const res = await fetch("https://randomuser.me/api/?results=10");
     const data = await res.json();
-    console.log(data.results);
+    // console.log(data.results);
     setUsers(data.results);
   };
   useEffect(() => {
@@ -34,7 +34,7 @@ const BodyMain = () => {
         );
       });
   }, []);
-  console.log(users);
+  // console.log(users);
   return (
     <div className="bodymain">
       <div className="bodymain__stories">
