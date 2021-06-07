@@ -6,7 +6,7 @@
   margin: 0.5em 0;
 }
 .searchuser:hover {
-  background-color: #fafafa;
+  background-color: var(--light-bg);
 }
 .searchuser__avatar {
   padding: 0.14em;
@@ -22,5 +22,5 @@
 }
 .searchuser__name > h3:nth-child(2) {
   font-weight: 400;
-  color: #959da5;
+  color: var(--grey-text);
 }

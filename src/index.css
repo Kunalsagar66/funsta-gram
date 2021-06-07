@@ -11,16 +11,24 @@
   --logo-font: "Cookie", cursive;
   --text-font: "Source Sans Pro", sans-serif;
   --border: 0.1px solid #dbdbdb;
+  --light-bg: #fafafa;
+  --light-card: #fff;
+  --light-body-text: #262626;
+  --grey-text: #959da5;
   --dark-bg: #0f0f0f;
   --dark-card: #0d0c0a;
-  background-color: #fafafa;
+  --dark-body-text: #fafafa;
+  --btn: #468bf6;
+  --comment: #969da5;
+  background-color: var(--light-bg);
   /* background-color: #0f0f0f; */
 }
 body {
-  background-color: #fafafa;
+  background-color: var(--light-bg);
+  /* background-color: #fafafa; */
   /* background-color: #0f0f0f; */
   font-family: var(--text-font);
-  color: #262626;
+  color: var(--light-body-text);
 }
 
 .app {

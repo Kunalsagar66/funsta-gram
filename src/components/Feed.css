@@ -1,6 +1,6 @@
 .feed {
-  background-color: #fff;
-  /* background-color: #0d0c0a; */
+  background-color: var(--light-card);
+
   margin-top: 1.75em;
   margin-bottom: 2em;
   border: var(--border);
@@ -67,7 +67,7 @@
 .feed__bottom__caption > p:nth-child(2) {
   margin-top: 0.25em;
   font-size: 0.85rem;
-  color: #468bf6;
+  color: var(--btn);
 }
 .feed__bottom__caption span {
   font-size: 0.95rem;
@@ -78,19 +78,18 @@
   margin-left: 0.25em;
   justify-content: space-between;
   font-weight: 400;
-  color: #969da5;
+  color: var(--comment);
 }
 .feed__bottom__comments > p:nth-child(2) {
   font-size: 0.8rem;
-  color: #000;
+  color: var(--body-text);
 }
 .feed__bottom__postcomment {
   position: relative;
   margin-top: 0.75em;
-  border-top: 0.1px solid #dbdbdb;
+  border-top: var(--border);
   padding: 0.5em 0;
   display: flex;
-  /* justify-content: space-between; */
 }
 .feed__bottom__postcomment__left {
   display: flex;
@@ -109,7 +108,7 @@
   font-size: 1rem;
   background-color: transparent;
   font-weight: 600;
-  color: #0095f6;
+  color: var(--btn);
 }
 .disable {
   opacity: 0.5;

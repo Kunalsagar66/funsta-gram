@@ -18,7 +18,7 @@
 }
 .story__username {
   text-align: center;
-  color: #959da5;
+  color: var(--grey-text);
   cursor: pointer;
   font-weight: 400;
 }
