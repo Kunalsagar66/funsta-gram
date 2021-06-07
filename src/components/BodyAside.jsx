@@ -26,15 +26,18 @@ const BodyAside = () => {
             {/* <box-icon name="log-out-circle"></box-icon> */}
           </div>
           <div className="bodyaside__text__mid">
-            <p>
-              <span>200</span> posts
-            </p>
-            <p>
-              <span>20</span> followers
-            </p>
-            <p>
-              <span>20</span> following
-            </p>
+            <div className="bodyaside__text__mid__posts">
+              <h4>200</h4>
+              <p>posts</p>
+            </div>
+            <div className="bodyaside__text__mid__following">
+              <h4>100</h4>
+              <p>following</p>
+            </div>
+            <div className="bodyaside__text__mid__followers">
+              <h4>10</h4>
+              <p>followers</p>
+            </div>
           </div>
           <div className="bodyaside__text__bottom">
             <h3>Ayush Maurya</h3>
