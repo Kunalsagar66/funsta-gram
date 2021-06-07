@@ -44,7 +44,7 @@ const BodyAside = () => {
               <p>posts</p>
             </div>
             <div className="bodyaside__text__mid__following">
-              <h4>100</h4>
+              <h4>1000</h4>
               <p>following</p>
             </div>
             <div className="bodyaside__text__mid__followers">
