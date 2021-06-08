@@ -20,6 +20,7 @@ const PostFeed = ({ hideAddBtn }) => {
       fontFamily: "Source Sans Pro",
     },
   });
+  
 
   const [image, setImage] = useState("");
   const [caption, setCaption] = useState("");
@@ -28,7 +29,10 @@ const PostFeed = ({ hideAddBtn }) => {
 
   const postHandler = () => {
     if (image) {
-      hideAddBtn(false);
+      if(window.innerWidth<550){
+        hideAddBtn(false);
+
+      }
       db.collection("posts")
         .doc()
         .set({
