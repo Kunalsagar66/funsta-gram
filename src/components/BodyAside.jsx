@@ -1,28 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./BodyAside.css";
 import PostFeed from "./PostFeed";
 import "boxicons";
 import { auth } from "./../firebase";
-const BodyAside = () => {
-  const [modal, setModal] = useState(false);
+import db from "../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
 
+const BodyAside = () => {
+  const [user] = useAuthState(auth);
+  const [modal, setModal] = useState(false);
+  const [quote, setQuote] = useState("");
+
+  // https://api.quotable.io/random
   const logOutHandlder = () => {
     setTimeout(() => {
       auth.signOut();
     });
   };
+  const getRandom = async () => {
+    const res = await fetch("https://api.quotable.io/random?{maxLength=20}");
+    const data = await res.json();
+    setQuote(data.content);
+  };
+  useEffect(() => {
+    getRandom();
+  }, []);
+  // console.log(user);
   return (
     <div className="bodyaside">
       <div className="bodyaside__user">
         <div className="bodyaside__avatar">
-          <img
-            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-            alt=""
-          />
+          <img src={user?.photoURL} alt="user" />
         </div>
         <div className="bodyaside__text">
           <div className="bodyaside__text__top">
-            <h3>ayush.maurya</h3>
+            <h3>{user?.displayName.replace(" ", ".").toLowerCase()}</h3>
 
             <p onClick={logOutHandlder}>Log out</p>
             {/* <box-icon name="log-out-circle"></box-icon> */}
@@ -42,15 +54,10 @@ const BodyAside = () => {
             </div>
           </div>
           <div className="bodyaside__text__bottom">
-            <h3>Ayush Maurya</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam,
-              atque.
-            </p>
+            <h3>{user?.displayName}</h3>
+            <p>{quote}</p>
           </div>
         </div>
-
-        {modal && <PostFeed handleModal={() => setModal(!modal)}></PostFeed>}
       </div>
       <PostFeed></PostFeed>
       {/* <button onClick={() => setModal(!modal)}>post</button> */}
