@@ -24,7 +24,7 @@ function App() {
       );
     }
   }, [user]);
-  console.log(user);
+
   return (
     <>
       {!user ? (

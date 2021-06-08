@@ -41,7 +41,7 @@ const BodyMain = () => {
     <div className="bodymain">
       <div className="bodymain__stories">
         {users?.map((user) => {
-          return <Story {...user}></Story>;
+          return <Story {...user} key={user.id}></Story>;
         })}
       </div>
 

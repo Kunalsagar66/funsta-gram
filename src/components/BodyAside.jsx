@@ -18,14 +18,14 @@ const BodyAside = () => {
     });
   };
   const getRandom = async () => {
-    const res = await fetch("https://api.quotable.io/random?{maxLength=20}");
+    const res = await fetch("https://api.quotable.io/random?maxLength=60");
     const data = await res.json();
     setQuote(data.content);
   };
   useEffect(() => {
     getRandom();
   }, []);
-  // console.log(user);
+  
   return (
     <div className="bodyaside">
       <div className="bodyaside__user">
