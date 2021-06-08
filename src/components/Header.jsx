@@ -1,13 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 import "boxicons";
 import users from "../users";
 import SearchUser from "./SearchUser";
+import db from "../firebase";
 import { auth } from "../firebase";
 import PostFeed from "./PostFeed";
 const Header = () => {
   const [togglePopup, setTogglePopup] = useState(false);
   const [addPost, setAddPost] = useState(false);
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    db.collection("users").onSnapshot((snapshot) => {
+      setUsers(
+        snapshot.docs.map((doc) => {
+          return { ...doc.data() };
+        })
+      );
+    });
+  });
   const searchHandler = () => {
     setTogglePopup(!togglePopup);
   };
@@ -27,8 +38,8 @@ const Header = () => {
             <h2>Recent</h2>
             <h2>Clear All</h2>
           </div>
-          {users.map((user, idx) => {
-            return <SearchUser {...user} key={idx}></SearchUser>;
+          {users.map((user) => {
+            return <SearchUser {...user} key={user.id}></SearchUser>;
           })}
         </div>
       )}
